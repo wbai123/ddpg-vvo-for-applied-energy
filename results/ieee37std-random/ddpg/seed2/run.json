@@ -1,0 +1,38 @@
+{
+  "task": {
+    "feeder": "ieee37std",
+    "dataset": "ieee37std-random",
+    "algorithm": "ddpg",
+    "observation": {
+      "name": "voltage_observation",
+      "size": 114
+    },
+    "action": {
+      "count": 2,
+      "low": 0.9,
+      "high": 1.1,
+      "proposal": "continuous_ratio",
+      "execution": "tap_position",
+      "replay": "executed_ratio",
+      "units": "p.u."
+    },
+    "reward": {
+      "name": "voltage_band",
+      "parameters": {
+        "mad_weight": 0.0,
+        "voltage_min": 0.95,
+        "voltage_max": 1.05,
+        "scale": 1000.0
+      }
+    },
+    "evaluation": {
+      "metric": "voltage_band"
+    }
+  },
+  "agent": {
+    "layer_sizes": [
+      400,
+      300
+    ]
+  }
+}

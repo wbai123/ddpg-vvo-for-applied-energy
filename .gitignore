@@ -1,0 +1,36 @@
+# Python: bytecode, caches and build artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.coverage
+.coverage.*
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Virtual environment (rebuild with uv, see CLAUDE.md "Setup")
+.venv/
+
+# Editors and operating systems
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# Source papers and slides: large binaries kept out of version control.
+# The files live in `papers/` on disk.
+*.pdf
+*.pptx
+*.docx
+
+# Repository scratch
+tmp/
+studies/
+
+# Architect hand-off file, private to the working tree
+TASK.md

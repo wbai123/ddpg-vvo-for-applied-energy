@@ -1,0 +1,39 @@
+{
+  "task": {
+    "feeder": "ieee37mod",
+    "dataset": "ieee37mod-random",
+    "algorithm": "seq_ddpg",
+    "observation": {
+      "name": "day_observation",
+      "size": 124
+    },
+    "action": {
+      "count": 5,
+      "low": 0.9,
+      "high": 1.1,
+      "proposal": "continuous_ratio",
+      "execution": "tap_position",
+      "replay": "executed_ratio",
+      "units": "p.u."
+    },
+    "reward": {
+      "name": "voltage_band_switching",
+      "parameters": {
+        "beta": 1e-05,
+        "voltage_min": 0.95,
+        "voltage_max": 1.05,
+        "scale": 1000.0
+      }
+    },
+    "evaluation": {
+      "metric": "voltage_band",
+      "beta": 1e-05
+    }
+  },
+  "agent": {
+    "layer_sizes": [
+      400,
+      300
+    ]
+  }
+}

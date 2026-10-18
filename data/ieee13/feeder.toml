@@ -1,0 +1,11 @@
+case = "IEEE13Nodeckt.dss"
+loads = ["671", "634a", "634b", "634c", "645", "646", "692", "675a", "675b", "675c", "611", "652", "670a", "670b", "670c"]
+regulators = [
+  { name = "Reg1", winding = 2 },
+  { name = "Reg2", winding = 2 },
+  { name = "Reg3", winding = 2 },
+]
+
+[voltage]
+convention = "line-ground"
+selection = "initial-live-nodes"

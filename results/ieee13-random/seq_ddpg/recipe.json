@@ -1,0 +1,135 @@
+{
+  "dataset": "ieee13-random",
+  "run_names": [
+    "b1e-05_seed0",
+    "b1e-05_seed1",
+    "b1e-05_seed2"
+  ],
+  "date": "2026-09-25",
+  "settings": {
+    "layer_sizes": {
+      "value": [
+        400,
+        300
+      ],
+      "provenance": "recorded"
+    },
+    "reward_parameters": {
+      "value": {
+        "beta": 1e-05,
+        "voltage_min": 0.95,
+        "voltage_max": 1.05,
+        "scale": 1000.0
+      },
+      "provenance": "recorded"
+    },
+    "benchmark_beta": {
+      "value": 1e-05,
+      "provenance": "recorded"
+    },
+    "completed_days": {
+      "value": 1000,
+      "provenance": "recorded"
+    },
+    "observation_size": {
+      "value": 46,
+      "provenance": "recorded"
+    },
+    "action_bounds_pu": {
+      "value": [
+        0.9,
+        1.1
+      ],
+      "provenance": "recorded"
+    },
+    "hidden_layers": {
+      "value": [
+        400,
+        300
+      ],
+      "provenance": "reconstructed"
+    },
+    "layer_normalization": {
+      "value": "actor hidden layers and critic state/merged hidden layers",
+      "provenance": "reconstructed"
+    },
+    "initialization": {
+      "value": "fan-in uniform; actor and critic outputs uniform on [-0.003, 0.003]",
+      "provenance": "reconstructed"
+    },
+    "actor_learning_rate": {
+      "value": 0.0001,
+      "provenance": "reconstructed"
+    },
+    "critic_learning_rate": {
+      "value": 0.001,
+      "provenance": "reconstructed"
+    },
+    "critic_count": {
+      "value": 1,
+      "provenance": "reconstructed"
+    },
+    "batch_size": {
+      "value": 64,
+      "provenance": "reconstructed"
+    },
+    "replay_capacity": {
+      "value": 1000000,
+      "provenance": "reconstructed"
+    },
+    "replay_sampling": {
+      "value": "uniform_without_replacement",
+      "provenance": "reconstructed"
+    },
+    "tau": {
+      "value": 0.001,
+      "provenance": "reconstructed"
+    },
+    "gamma": {
+      "value": 1.0,
+      "provenance": "reconstructed"
+    },
+    "noise_schedule_normalized": {
+      "value": {
+        "process": "independent_gaussian",
+        "start": 0.4,
+        "floor": 0.15,
+        "decay": 0.99977
+      },
+      "provenance": "reconstructed"
+    },
+    "uniform_action_share": {
+      "value": {
+        "warmup": 1.0,
+        "after_warmup": 0.1
+      },
+      "provenance": "reconstructed"
+    },
+    "warmup": {
+      "value": {
+        "days": 20,
+        "interactions": 480
+      },
+      "provenance": "reconstructed"
+    },
+    "learning_start_interaction": {
+      "value": 64,
+      "provenance": "reconstructed"
+    },
+    "gradient_clipping": {
+      "value": {
+        "actor_max_norm": 1.0,
+        "critic_max_norm": 1.0
+      },
+      "provenance": "reconstructed"
+    },
+    "critic_weight_decay": {
+      "value": 0.0,
+      "provenance": "reconstructed"
+    },
+    "checkpoint_cadence_days": {
+      "value": 200,
+      "provenance": "reconstructed"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "feeder": "ieee37std",
+  "pattern": "random",
+  "seed": 12345,
+  "train_days": 1000,
+  "validation_days": 200,
+  "test_days": 200,
+  "low": 0.5,
+  "high": 1.5,
+  "decimals": 6
+}

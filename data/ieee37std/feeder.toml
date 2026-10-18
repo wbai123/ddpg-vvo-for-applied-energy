@@ -1,0 +1,9 @@
+case = "ieee37.dss"
+regulators = [
+  { name = "reg1a", winding = 2 },
+  { name = "reg1c", winding = 2 },
+]
+
+[voltage]
+convention = "line-line"
+selection = "three-phase-pairs-except-sourcebus"

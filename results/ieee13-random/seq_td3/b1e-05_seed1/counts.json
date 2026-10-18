@@ -1,0 +1,7 @@
+{
+  "days": 1000,
+  "interactions": 24000,
+  "critic_iterations": 23520,
+  "actor_updates": 11760,
+  "target_updates": 11760
+}

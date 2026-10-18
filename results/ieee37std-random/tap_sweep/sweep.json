@@ -1,0 +1,13 @@
+{
+  "feeder": "ieee37std",
+  "dataset": "ieee37std-random",
+  "split": "validation",
+  "engine": "DSS C-API Library version 0.14.5 revision 87d85c2622c8281b92255335bc7c09b11191b21d based on OpenDSS SVN 3723 [FPC 3.2.2] (64-bit build) MVMULT INCREMENTAL_Y CONTEXT_API PM 20240329033721; License Status: Open; DSS-Python version: 0.15.7; OpenDSSDirect.py version: 0.9.4",
+  "grid": 33,
+  "scenarios": 4800,
+  "distinct_scenarios": 4793,
+  "solves": 5219577,
+  "failed_solves": 0,
+  "wall_seconds": 1854.830633075966,
+  "tie_rule": "Choose the lowest converged cost; exact ties choose the smallest Manhattan distance from (16, 16), then the lexicographically smaller pair."
+}

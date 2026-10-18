@@ -1,0 +1,82 @@
+{
+  "task": {
+    "feeder": "ieee13",
+    "dataset": "ieee13-random",
+    "algorithm": "seq_td3",
+    "observation": {
+      "name": "day_observation",
+      "size": 46
+    },
+    "action": {
+      "count": 3,
+      "low": 0.9,
+      "high": 1.1,
+      "proposal": "continuous_ratio",
+      "execution": "tap_position",
+      "replay": "executed_ratio",
+      "units": "p.u."
+    },
+    "reward": {
+      "name": "voltage_band_switching",
+      "parameters": {
+        "beta": 1e-05,
+        "voltage_min": 0.95,
+        "voltage_max": 1.05,
+        "scale": 1000.0
+      }
+    },
+    "evaluation": {
+      "metric": "voltage_band",
+      "beta": 1e-05
+    }
+  },
+  "agent": {
+    "layer_sizes": [
+      400,
+      300
+    ],
+    "settings": {
+      "seed": 1,
+      "random_streams": {
+        "day_order": [
+          1,
+          1
+        ],
+        "learner": [
+          1,
+          2
+        ],
+        "torch": 1
+      },
+      "gamma": 1.0,
+      "actor_learning_rate": 0.0003,
+      "critic_learning_rate": 0.0003,
+      "batch_size": 256,
+      "replay_capacity": 1000000,
+      "replay_sampling": "with_replacement",
+      "tau": 0.005,
+      "policy_delay": 2,
+      "target_smoothing_sigma_normalized": 0.2,
+      "target_smoothing_sigma_pu": 0.02,
+      "target_smoothing_clip_normalized": 0.5,
+      "target_smoothing_clip_pu": 0.05,
+      "exploration_sigma_normalized": 0.1,
+      "exploration_sigma_pu": 0.01,
+      "initialization": "torch_default_linear",
+      "checkpoint_support": "inference_only",
+      "warmup_interactions": 480,
+      "warmup_days": 20,
+      "learning_start_interaction": 481,
+      "critic_iterations_per_interaction": 1,
+      "action_map": {
+        "midpoint": 1.0,
+        "half_range": 0.10000000000000003,
+        "normalized_range": [
+          -1.0,
+          1.0
+        ]
+      },
+      "training_days": 1000
+    }
+  }
+}

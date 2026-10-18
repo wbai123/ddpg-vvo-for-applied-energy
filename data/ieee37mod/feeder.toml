@@ -1,0 +1,13 @@
+case = "ieee37.dss"
+regulators = [
+  { name = "reg1a", winding = 2 },
+  { name = "reg1c", winding = 2 },
+  { name = "reg2a", winding = 2 },
+  { name = "reg2b", winding = 2 },
+  { name = "reg2c", winding = 2 },
+]
+native_control_iterations = 100
+
+[voltage]
+convention = "line-line"
+selection = "three-phase-pairs-except-sourcebus"
